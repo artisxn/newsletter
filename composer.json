@@ -1,0 +1,52 @@
+{
+    "name": "codicastudio/newsletter",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/newsletter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.4.8",
+        "illuminate/support": "^7.0",
+        "drewm/mailchimp-api": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^9.0",
+        "mockery/mockery": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\Newsletter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\Newsletter\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\Newsletter\\NewsletterServiceProvider"
+            ],
+            "aliases": {
+                "Newsletter": "codicastudio\\Newsletter\\NewsletterFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
